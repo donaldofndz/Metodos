@@ -11,6 +11,7 @@ function bubbleSort(arr){
 
 	ret = Array.from(arr)
 	var bandera = false
+	var pasadas = 0
 	do{
 		var bandera = false
 		for (var i = 1; i < ret.length ; i++){
@@ -19,8 +20,10 @@ function bubbleSort(arr){
 				bandera=true
 			}
 		}
+		pasadas++
 	}while(bandera)
 
+	console.log("El numero total de pasadas fue: " + pasadas)
 	return ret
 }
 
